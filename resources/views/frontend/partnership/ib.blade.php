@@ -1,0 +1,210 @@
+@extends('frontend.layout.main')
+
+@section('main-container')
+
+
+<style>
+    .ib_img2{
+        width: 300px;
+        height: auto;
+    }
+    
+    .custom-list {
+        margin-bottom: 0;
+        /* Ensures no extra space below the list */
+    }
+
+    .custom-list li::marker {
+        color: #0056b3;
+        /* Blue marker */
+        /*font-size: 1.5em;*/
+        /* Increase the size of the marker */
+    }
+
+    /*.custom-list li {*/
+    /*    position: relative;*/
+    /*    list-style-type: none;*/
+        /* Remove default marker */
+    /*    padding-left: 2em;*/
+        /* Add space for the custom marker */
+    /*}*/
+
+    /*.custom-list li::before {*/
+    /*    content: '';*/
+    /*    position: absolute;*/
+    /*    left: 0;*/
+    /*    top: 29%;*/
+    /*    transform: translateY(-50%);*/
+    /*    width: 12px;*/
+        /* Set width of rectangle */
+    /*    height: 12px;*/
+        /* Set height of rectangle */
+    /*    background-color: #0056b3;*/
+        /* Blue color for rectangle */
+    /*    border-radius: 2px;*/
+        /* Slight rounding of the corners, adjust as needed */
+    /*}*/
+
+
+    .ib_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .b-abc {
+        color: blue;
+    }
+
+    .text {
+        text-align: justify;
+    }
+
+    .head-img {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .head-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        z-index: 2;
+        font-size: 24px;
+    }
+
+    .text-overlay h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .text-overlay p {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .container-fluid {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        .head-img {
+            height: 200px;
+        }
+
+        .text-overlay {
+            font-size: 18px;
+        }
+
+        .text-overlay h1 {
+            font-size: 24px;
+        }
+
+        .text-overlay p {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .head-img {
+            height: 150px;
+        }
+
+        .text-overlay {
+            font-size: 16px;
+        }
+
+        .text-overlay h1 {
+            font-size: 20px;
+        }
+
+        .text-overlay p {
+            font-size: 12px;
+        }
+
+        .container .row>div {
+            text-align: center;
+        }
+    }
+</style>
+
+<!-- full Title -->
+<div class="full-title">
+    <div class="container-fluid">
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="head-img m-0 p-0">
+            <img src="assets/images/ib.jpg" alt="IB Image">
+            <div class="overlay"></div> <!-- Black transparent overlay -->
+            <div class="text-overlay">
+                <h1>INTRODUCING BROKER</h1>
+                <p class="mt-4">Earn commissions by introducing clients to a multi-regulated broker offering advanced
+                    trading tools and educational resources for free.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-3">
+    <div class="row d-flex align-items-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+            <img src="assets/images/ib.avif" class="ib_img" alt="IB Image">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <h1>What is an <br><span class="b-abc">Introducing Broker or IB?</span></h1>
+            <p>Introducing Brokers (IBs) are companies or individuals across the globe who make money by introducing
+                clients to RockfieldTrade. In return for referring clients to RockfieldTrade, our Introducing Brokers receive a
+                commission.</p>
+            <p>Becoming an Introducing Broker can be the easiest method to increase your income, as there’s no cost to
+                sign up. As an IB, you can work from anywhere, even promoting your services through a website.</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-light">
+    <div class="second my-3 mx-5">
+        <h1 class="pt-3">Why should you become a RockfieldTrade<br><span class="b-abc">Introducing Broker?</span></h1>
+        <div class="row d-flex align-items-center"> <!-- Added align-items-center here -->
+            <div class="col-lg-5 col-md-5 col-sm-12 m-3">
+                <ul class="custom-list">
+                    <li>Get paid $10 per lot on a Classic account and $2.5 per lot on RAW accounts.</li>
+                    <li>Every trade generated by your referral will earn you commission.</li>
+                    <li>Recommend your clients to open  RockfieldTrade Trader Raw account and they will get a 5%
+                        discount on commissions.</li>
+                    <li>Access our intuitive IB room with advanced fund and account management tools.</li>
+                    <li>Utilise the huge range of ready-made advertising material to effectively attract new clients.</li>
+                    <li>Work with a broker that offers ultimate transparency!</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-5 col-md-5 col-sm-12 m-3 d-flex justify-content-center"> <!-- Use justify-content-center for horizontal centering -->
+                <img src="assets/images/ib2.avif" alt="Image" class="ib_img2"> <!-- Ensure img-fluid is included -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@endsection
